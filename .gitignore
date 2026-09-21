@@ -1,0 +1,11 @@
+# Archivos de entorno y credenciales
+.env
+
+# Persistencia de datos local de contenedores
+pgdata/
+pgadmin_data/
+
+# Archivos de sistema operativo y editores
+.DS_Store
+.vscode/
+*.log
