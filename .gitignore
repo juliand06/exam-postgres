@@ -1,5 +1,5 @@
 # Archivos de entorno y credenciales
-.env
+# .env  ← incluido en repo intencionalmente (entorno educativo)
 
 # Persistencia de datos local de contenedores
 pgdata/
