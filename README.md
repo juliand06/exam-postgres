@@ -32,7 +32,9 @@ El diseño garantiza:
 > 📄 **Documento Completo con Simbología Formal:** Consulta la especificación detallada en [MODELO_CONCEPTUAL_CHEN.md](MODELO_CONCEPTUAL_CHEN.md).
 
 ### Diagrama Físico Relacional (DrawSQL)
-![Diagrama Físico de la Base de Datos](image.png)
+> 📐 **Schema listo para importar en DrawSQL:**  
+> Abre [drawsql.app](https://drawsql.app) → `New Diagram` → `Import SQL` → Motor: **PostgreSQL** → pega el contenido de [`sql/drawsql_schema.sql`](sql/drawsql_schema.sql) → **Run**.  
+> El diagrama con las **17 tablas y 20 relaciones FK** se genera automáticamente.
 
 ### Estructura Lógica de Entidades y Cardinalidades
 
