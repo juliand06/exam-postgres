@@ -28,10 +28,13 @@ El diseño garantiza:
 
 ## 🏛️ 2. Arquitectura de Datos y Modelo Entidad-Relación
 
+### Diagrama Conceptual (Notación de Chen)
+> 📄 **Documento Completo con Simbología Formal:** Consulta la especificación detallada en [MODELO_CONCEPTUAL_CHEN.md](MODELO_CONCEPTUAL_CHEN.md).
+
 ### Diagrama Físico Relacional (DrawSQL)
 ![Diagrama Físico de la Base de Datos](image.png)
 
-### Estructura Lógica de Entidades
+### Estructura Lógica de Entidades y Cardinalidades
 
 ```
 [ Países ] ──( 1:N )── [ Departamentos ] ──( 1:N )── [ Municipios ]
