@@ -94,19 +94,31 @@ exam-postgres/
 ### Requisitos
 * [Docker Desktop](https://www.docker.com/) o Docker Engine con Docker Compose v2+.
 * [Git](https://git-scm.com/) instalado.
-* [Visual Studio Code](https://code.visualstudio.com/) (opcional, para uso con Dev Containers).
 
-### Paso 1: Configurar variables de entorno
+### Paso 1: Clonar el repositorio
 ```bash
-cp .env.example .env
+git clone https://github.com/juliand06/exam-postgres.git
+cd exam-postgres
 ```
 
-### Paso 2: Levantar el entorno con Docker Compose
+### Paso 2: Levantar el entorno (¡una sola vez!)
 ```bash
-docker compose up -d --build
+docker compose up -d
 ```
 
-El servicio `postgres_db` ejecuta automáticamente todos los scripts de `./init` en orden secuencial (`01` a `05`). Una vez que la base de datos supera su `healthcheck`, inician `workspace` y `pgadmin_web`.
+> **Eso es todo.** El archivo `.env` ya está incluido en el repositorio con las credenciales del entorno de evaluación.  
+> El servicio `postgres_db` ejecuta automáticamente todos los scripts de `./init` en orden secuencial (`01` al `05`): DDL → SP/Funciones → Triggers → Datos de prueba → Vistas.  
+> Una vez que supera el `healthcheck`, inician `pgadmin_web` y `workspace` automáticamente.
+
+### Verificar que todo esté corriendo
+```bash
+docker compose ps
+```
+
+### Verificar las tablas y datos desde la terminal
+```bash
+docker compose exec postgres_db psql -U bkseducate -d bkddb -c "\dt"
+```
 
 ---
 
