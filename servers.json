@@ -1,13 +1,13 @@
 {
-    "Servers": {
-      "1": {
-        "Name": "SST PESV PostgreSQL Server",
-        "Group": "Servers",
-        "Host": "postgres",
-        "Port": 5432,
-        "MaintenanceDB": "sst_pesv_db",
-        "Username": "postgres",
-        "SSLMode": "prefer"
-      }
+  "Servers": {
+    "1": {
+      "Name": "PostgreSQL SST-PESV (Dev)",
+      "Group": "Servers",
+      "Host": "postgres_db",
+      "Port": 5432,
+      "MaintenanceDB": "bkddb",
+      "Username": "bkseducate",
+      "SSLMode": "prefer"
     }
   }
+}
